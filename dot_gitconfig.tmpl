@@ -1,0 +1,115 @@
+[user]
+	name = Andrew Farries
+	email = andyrb@gmail.com
+	signingkey = E4DD8250DD7DCE22
+[init]
+  defaultBranch = main
+[color]
+	ui = true
+[core]
+	whitespace = trailing-space, space-before-tab, cr-at-eol
+	editor = nvim
+	fileMode = false
+	ignorecase = true
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Dracula
+  navigate = true
+  line-numbers = true
+  side-by-side = false
+[interactive]
+  diffFilter = delta --color-only
+[advice]
+	detachedHead = false
+[diff]
+	tool = neovimdiff
+	indentHeuristic = on
+[difftool "neovimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+[merge]
+	tool = kdiff3
+	conflictstyle = diff3
+[mergetool "neovimmerge"]
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED
+	keepBackup = false
+[alias]
+	co = checkout
+	home = checkout origin/main
+	st = status
+	sv = status -vv
+	ci = commit --verbose
+	hr = reset --hard
+	detach = checkout --detach
+	ds = diff --stat
+	dt = difftool
+	d = diff --ws-error-highlight=all --indent-heuristic
+	dc = diff --ws-error-highlight=all --cached --indent-heuristic
+	dcw = diff -w --ws-error-highlight=all --cached --indent-heuristic
+	dw = diff -w --indent-heuristic
+	rb = rebase
+	rbi = rebase -i
+	rbf = rebase -f
+	rbm = rebase origin/main
+	rbim = rebase -i origin/main
+	rbc = rebase --continue
+	br = branch
+	lg = log --graph --pretty=myoneline
+	l = log --graph --pretty=myoneline --first-parent origin/main HEAD
+	la = log --graph --pretty=myoneline --first-parent --branches origin/main HEAD
+	lb = log --graph --pretty=myoneline --first-parent origin/main..
+	laa = log --graph --pretty=myoneline --first-parent --all HEAD
+	laaa = log --graph --pretty=myoneline --all HEAD
+	ft = fetch --prune
+	ff = merge --ff-only
+	rp = rev-parse
+	mt = mergetool
+	sl = stash list
+	sa = stash apply
+	cia = commit --verbose -a
+	cim = commit --reset-author --verbose -c
+	ciam = commit -a --reset-author --verbose -c
+	amend = commit --verbose --reset-author --amend --no-edit
+	amenda = commit -a --verbose --reset-author --amend --no-edit
+	cp = cherry-pick
+	line = show --oneline -s
+	fix = commit --verbose --fixup
+	fixa = commit -a --verbose --fixup
+	addi = add --interactive
+	addp = add -p
+	adde = add --edit
+	shows = show -s
+	shown = show --name-only
+	fpush = push --force-with-lease --force-if-includes
+	upush = push -u origin HEAD
+	cop = checkout -p
+[diff]
+	algorithm = histogram
+[clean]
+	requireForce = false
+[push]
+	default = simple
+[rerere]
+	enabled = false
+[pretty]
+	myoneline = "%C(auto)%h %C(green)[%<(16,trunc)%an] %C(reset)(%C(cyan)%<(8,trunc)%ar%C(reset)) %C(reset)%<(100,trunc)%s%C(auto)%d"
+[color "diff"]
+	whitespace = red reverse
+[rebase]
+	autosquash = true
+	autostash = true
+[mergetool]
+	keepBackup = false
+[github]
+	user = andrew-farries
+[ghi]
+	token = e8debca8e87bfda415dd6841acbd313d50eef97e
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[commit]
+	gpgsign = true
