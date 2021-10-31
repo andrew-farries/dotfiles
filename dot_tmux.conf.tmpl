@@ -147,3 +147,16 @@ bind-key -T copy-mode-vi 'C-\' select-pane -l
 # Now that ctrl-l is no longer available to clear the screen (taken by vim-tmux-navigator)
 # define a new prefixed version.
 bind C-l send-keys 'C-l'
+
+{{ if (eq .chezmoi.os "darwin") -}}
+# MacOS specific config
+
+# Take buffer contents and put them in the system clipboard
+bind C-c run "tmux save-buffer - | pbcopy"
+
+# y in copy mode takes the selection and sends it to the system clipboard
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+
+# Fill tmux buffer from system clipboard, then paste into tmux window
+bind C-v run "tmux set-buffer \"$(pbpaste)\"; tmux paste-buffer"
+{{- end }}
