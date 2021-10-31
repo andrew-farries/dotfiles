@@ -1,0 +1,4 @@
+# Ripgrep config file
+
+# Always use smart case
+--smart-case
