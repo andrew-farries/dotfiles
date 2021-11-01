@@ -1,0 +1,7 @@
+sourceDir: ~/git/dotfiles-public
+cd:
+  command: fish
+diff:
+  command: delta
+edit:
+  command: nvim
