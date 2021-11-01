@@ -1,0 +1,7 @@
+# /Users/andrewfarries/.config/tmuxinator/talks.yml
+
+name: talks
+root: ~/git/talks/
+
+windows:
+  - ideas: vi README.md

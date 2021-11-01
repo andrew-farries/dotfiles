@@ -1,0 +1,10 @@
+# /Users/andrewfarries/.config/tmuxinator/main.yml
+
+name: work
+root: ~/
+
+windows:
+  - main:
+  - serv:
+      root: ~/spawn
+  - todo: vi ~/todo.md

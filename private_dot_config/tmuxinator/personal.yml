@@ -1,0 +1,12 @@
+# /Users/andrewfarries/.config/tmuxinator/personal.yml
+
+name: personal
+root: ~/git
+
+windows:
+  - vimpg:
+      root: ~/git/vim-playground
+  - dotfiles:
+      root: ~/git/dotfiles
+  - terra:
+      root: ~/git/terraform-playground
