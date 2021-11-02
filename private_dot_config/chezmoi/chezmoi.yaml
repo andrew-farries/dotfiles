@@ -1,4 +1,4 @@
-sourceDir: ~/git/dotfiles-public
+sourceDir: ~/git/dotfiles
 cd:
   command: fish
 diff:
