@@ -1,4 +1,5 @@
 README.md
+install.sh
 {{- if eq .chezmoi.os "darwin" }}
 .config/sway
 {{- end }}
