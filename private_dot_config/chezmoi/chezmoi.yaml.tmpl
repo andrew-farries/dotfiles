@@ -1,3 +1,5 @@
+{{- $interactive:= env "CODESPACES" | not -}}
+
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 cd:
   command: fish
@@ -6,4 +8,6 @@ diff:
 edit:
   command: nvim
 data:
+  {{- if $interactive }}
   redgate_private_feed_pat: {{ (onepassword "ieh7v6v7y7x4l2fyxfe3nut3qu").details.password }}
+  {{- end }}
