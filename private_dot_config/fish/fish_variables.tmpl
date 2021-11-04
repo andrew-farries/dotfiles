@@ -7,7 +7,7 @@ SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dinfo\x3ddefault\x20\x2d\x2dborder\x20\
 SETUVAR --export GOPRIVATE:github\x2ecom/red\x2dgate
 SETUVAR --export KOPS_STATE_STORE:s3\x3a//cluster\x2eredgatefoundry\x2ecom
 SETUVAR --export PAGER:less
-SETUVAR --export REDGATE_PRIVATE_FEED_PAT:{{ (onepassword "ieh7v6v7y7x4l2fyxfe3nut3qu").details.password }}
+SETUVAR --export REDGATE_PRIVATE_FEED_PAT:{{ .redgate_private_feed_pat }}
 SETUVAR --export --path RIPGREP_CONFIG_PATH:/Users/andrewfarries/\x2ergrc
 SETUVAR --export VISUAL:vi
 SETUVAR __fish_initialized:3100
