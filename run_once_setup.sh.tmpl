@@ -1,11 +1,13 @@
 {{ if eq .codespace true -}}
 #! /bin/sh
 
-
 sudo apt-get update
-sudo apt-get install -y ripgrep
-sudo apt-get install -y fzf
-sudo apt-get install -y bat
+
+# Horrible -o option here only needed on Ubuntu 20.04, see: https://bit.ly/2ZVXPpS
+sudo apt-get install -o Dpkg::Options::="--force-overwrite" -y \
+  bat \
+  ripgrep \
+  fzf
 
 # On Ubuntu, `bat` is installed as `batcat` so this symink is needed.
 ln -s /usr/bin/batcat ~/bin/bat
