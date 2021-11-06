@@ -3,7 +3,7 @@
 
 sudo apt-get update
 
-# Horrible -o option here only needed on Ubuntu 20.04, see: https://bit.ly/2ZVXPpS
+# Horrible -o option here only needed on Ubuntu before 20.04, see: https://bit.ly/2ZVXPpS
 sudo apt-get install -o Dpkg::Options::="--force-overwrite" -y \
   bat \
   ripgrep \
@@ -15,5 +15,9 @@ ln -s /usr/bin/batcat ~/bin/bat
 wget -q https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
 sudo dpkg -i lsd_0.20.1_amd64.deb
 rm -f lsd_0.20.1_amd64.deb
+
+wget -q https://github.com/dandavison/delta/releases/download/0.9.2/git-delta-musl_0.9.2_amd64.deb
+sudo dpkg -i git-delta-musl_0.9.2_amd64.deb
+rm -f git-delta-musl_0.9.2_amd64.deb
 
 {{ end -}}
