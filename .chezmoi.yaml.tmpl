@@ -1,4 +1,4 @@
-{{- $codespace:= env "CODESPACES" | not -}}
+{{- $codespace:= env "CODESPACES" | not | not -}}
 
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 cd:
@@ -9,7 +9,8 @@ edit:
   command: nvim
 data:
   {{- if $codespace }}
-  redgate_private_feed_pat: {{ (onepassword "ieh7v6v7y7x4l2fyxfe3nut3qu").details.password }}
-  {{- else }}
+  codespace: true
   redgate_private_feed_pat: {{ env "REDGATE_PRIVATE_FEED_PAT" }}
+  {{- else }}
+  redgate_private_feed_pat: {{ (onepassword "ieh7v6v7y7x4l2fyxfe3nut3qu").details.password }}
   {{- end }}
