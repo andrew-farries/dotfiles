@@ -270,7 +270,7 @@ let g:floaterm_width = 0.99
 let g:floaterm_height = 0.99
 
 " Autoclose the window when the process it was opened with exits
-let g:floaterm_autoclose = v:true
+let g:floaterm_autoclose = 2
 " Set transparency for the floating terminal window
 let g:floaterm_winblend = 0
 " }}}
