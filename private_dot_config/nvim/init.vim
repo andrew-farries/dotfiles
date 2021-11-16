@@ -263,7 +263,7 @@ let g:floaterm_shell = 'fish'
 
 " Use the current editor for editing git commit mesages initiated from the
 " terminal (open in a new tab).
-let g:floaterm_gitcommit = 'tabe'
+let g:floaterm_opener= 'vsplit'
 
 " Set the dimensions for the floating terminal
 let g:floaterm_width = 0.99
