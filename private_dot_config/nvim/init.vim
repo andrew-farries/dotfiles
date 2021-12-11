@@ -186,7 +186,7 @@ autocmd FileType * let b:coc_additional_keywords = ["-"]
 " https://github.com/nvim-treesitter/nvim-treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "go", "c_sharp", "typescript", "javascript" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = { "go", "c_sharp", "typescript", "javascript", "bash" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true,              -- false will disable the whole extension
   },
