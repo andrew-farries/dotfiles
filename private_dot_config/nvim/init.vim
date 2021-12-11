@@ -322,9 +322,6 @@ noremap <leader>gd :Gdiff<CR>
 nnoremap y "*y
 vnoremap y "*y
 
-" Bind Y to yank to end of line as suggested in `:h Y`
-nnoremap Y "*y$
-
 " Define some copy/paste with system clipboard mappings.
 noremap <leader>p "*p
 noremap <leader>P "*P
@@ -390,14 +387,6 @@ tnoremap <silent> <c-t> <c-\><C-n>:FloatermToggle<CR>
 " Navigation key mappings {{{
 noremap <PageUp> [c
 noremap <PageDown> ]c
-" }}}
-
-" Buffers {{{
-" Make buffers behave in a sane way
-set hidden
-
-" Don't add a trailing newline at the end of the file
-set nofixeol
 " }}}
 
 " Fold options {{{
@@ -551,10 +540,6 @@ set autoread
 
 " Briefly show the matching bracket after typing it
 set showmatch matchtime=1
-
-" Set incommand so that the results of subsitution commands are previewed
-" before taking effect. See: http://vimcasts.org/episodes/neovim-eyecandy/
-set inccommand=nosplit
 " }}}
 
 " Set the modeline to enable code folding in this file.
