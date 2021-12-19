@@ -501,9 +501,12 @@ set smartcase
 
 " Focus events {{{
 " Reload buffers when focus is gained
-au FocusGained,BufEnter * :silent! !
 " Save buffers when focus is lost
-au FocusLost,WinLeave * :silent! update
+augroup andrewFarriesfocusStuff
+  autocmd!
+  au FocusGained,BufEnter * :silent! e
+  au FocusLost,WinLeave * :silent! update
+augroup END
 " }}}
 
 " Window resizing {{{
