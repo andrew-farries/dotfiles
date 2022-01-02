@@ -33,6 +33,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
+Plug 'svban/YankAssassin.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " According to its documentation, the vim-devicons plugin should always be
 " loaded last.
