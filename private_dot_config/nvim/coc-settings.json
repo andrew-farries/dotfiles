@@ -5,7 +5,7 @@
   "coc.source.around.firstMatch": false,
   // "go.trace.server": "verbose",
   "go.goplsOptions": {
-    "experimentalWorkspaceModule": true,
+    "experimentalWorkspaceModule": false,
     "experimentalPostfixCompletions": true,
     "analyses": {
       "fillreturns": true,
