@@ -505,7 +505,7 @@ set smartcase
 " Save buffers when focus is lost
 augroup andrewFarriesfocusStuff
   autocmd!
-  au FocusGained,BufEnter * if &buftype == '' | :silent! e | endif
+  au FocusGained,BufEnter * :silent! !
   au FocusLost,WinLeave * :silent! update
 augroup END
 " }}}
