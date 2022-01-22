@@ -3,7 +3,6 @@
   "coc.preferences.useQuickfixForLocations": true,
   "coc.source.buffer.firstMatch": false,
   "coc.source.around.firstMatch": false,
-  // "go.trace.server": "verbose",
   "go.goplsOptions": {
     "experimentalWorkspaceModule": false,
     "experimentalPostfixCompletions": true,
