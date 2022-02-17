@@ -116,9 +116,6 @@ bind v set -g status
 # Enable focus events so that applications in panes can respond to focus events
 set -g focus-events on
 
-# Source mac specific setup if the `uname` indicates we are running on a mac.
-if-shell "uname | grep -q Darwin" "source-file ~/.tmux.mac.conf"
-
 # Smart pane switching with awareness of Vim splits (and fzf).
 # See: https://github.com/christoomey/vim-tmux-navigator
 # See: https://www.bugsnag.com/blog/tmux-and-vim for the additon for fzf.
