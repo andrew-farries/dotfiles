@@ -24,6 +24,8 @@
 			"settings": {}
 		}
 	},
+  "list.nextKeymap": "<c-n>",
+  "list.previousKeymap": "<c-p>",
   "suggest.noselect": false,
 	"suggest.completionItemKindLabels": {
 		"keyword": "\uf1de",
