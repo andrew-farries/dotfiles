@@ -5,6 +5,10 @@
   defaultBranch = main
 [color]
 	ui = true
+{{ if eq .gitpod true -}}
+[credential]
+  helper = /usr/bin/gp credential-helper
+{{ end -}}
 [core]
 	whitespace = trailing-space, space-before-tab, cr-at-eol
 	editor = nvim

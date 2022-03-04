@@ -1,4 +1,5 @@
 {{- $codespace:= env "CODESPACES" | not | not -}}
+{{- $gitpod:= env "GITPOD_WORKSPACE_ID" | not | not -}}
 
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 cd:
@@ -12,4 +13,9 @@ data:
   codespace: true
   {{- else }}
   codespace: false
+  {{- end }}
+  {{- if $gitpod }}
+  gitpod: true
+  {{- else }}
+  gitpod: false
   {{- end }}
