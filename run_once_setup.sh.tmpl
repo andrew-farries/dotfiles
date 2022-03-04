@@ -1,6 +1,12 @@
 {{ if eq .gitpod true -}}
 #! /bin/sh
 
-brew install lsd bat fzf fd git-delta
+brew install \
+    lsd \
+    bat \
+    fzf \
+    fd \
+    git-delta \
+    neovim
 
 {{ end -}}
