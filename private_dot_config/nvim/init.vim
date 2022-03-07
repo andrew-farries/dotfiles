@@ -366,6 +366,10 @@ noremap <leader>gd :Gdiff<CR>
 nnoremap y "*y
 vnoremap y "*y
 
+" Bind Y to yank to end of line as suggested in `:h Y
+" This is now default behavior in neovim, so doesn't strictly need to be here.
+nnoremap Y "*y$
+
 " Define some copy/paste with system clipboard mappings.
 noremap <leader>p "*p
 noremap <leader>P "*P
@@ -463,6 +467,11 @@ set pumheight=10
 augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
+augroup END
+
+augroup osc_yank
+  autocmd!
+  autocmd TextYankPost * if $SSH_CLIENT != '' && v:event.operator is 'y' && v:event.regname is '*' | execute 'OSCYankReg *' | endif
 augroup END
 " }}}
 
