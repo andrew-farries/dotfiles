@@ -5,7 +5,7 @@
 
 # Set fish as the default shell
 {{ if (eq .chezmoi.os "darwin") -}}
-set -g default-command /usr/local/bin/fish
+set -g default-command /opt/homebrew/bin/fish
 {{- end -}}
 {{ if (eq .chezmoi.os "linux") -}}
 set -g default-command /bin/fish
