@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "coc.preferences.formatOnSaveFiletypes": ["go", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "coc.preferences.useQuickfixForLocations": true,
   "coc.source.buffer.firstMatch": false,
   "coc.source.around.firstMatch": false,
