@@ -10,7 +10,7 @@ SETUVAR --export PAGER:less
 SETUVAR --export --path RIPGREP_CONFIG_PATH:{{ .chezmoi.homeDir }}/.rgrc
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
-{{ if (not (eq .chezmoi.os "darwin")) -}}
+{{ if (eq .chezmoi.os "linux") -}}
 SETUVAR _fish_abbr_d:docker
 {{- end -}}
 {{ if (eq .chezmoi.os "darwin") -}}
