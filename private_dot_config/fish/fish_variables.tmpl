@@ -13,6 +13,9 @@ SETUVAR __fish_initialized:3100
 {{ if (not (eq .chezmoi.os "darwin")) -}}
 SETUVAR _fish_abbr_d:docker
 {{- end -}}
+{{ if (eq .chezmoi.os "darwin") -}}
+SETUVAR _fish_abbr_l:limactl
+{{- end }}
 SETUVAR _fish_abbr_b:bat
 SETUVAR _fish_abbr_c:chezmoi
 SETUVAR _fish_abbr_e:etcdctl
