@@ -10,11 +10,11 @@ SETUVAR --export PAGER:less
 SETUVAR --export --path RIPGREP_CONFIG_PATH:{{ .chezmoi.homeDir }}/.rgrc
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
-SETUVAR _fish_abbr_b:bat
-SETUVAR _fish_abbr_c:chezmoi
 {{ if (not (eq .chezmoi.os "darwin")) -}}
 SETUVAR _fish_abbr_d:docker
 {{- end -}}
+SETUVAR _fish_abbr_b:bat
+SETUVAR _fish_abbr_c:chezmoi
 SETUVAR _fish_abbr_e:etcdctl
 SETUVAR _fish_abbr_f:flyway
 SETUVAR _fish_abbr_g:git
