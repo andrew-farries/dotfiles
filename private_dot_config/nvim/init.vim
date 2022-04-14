@@ -57,7 +57,13 @@ EOF
 
 " Plugin settings: nvim-tree {{{
 lua << EOF
-require'nvim-tree'.setup()
+require'nvim-tree'.setup{
+  actions = {
+    open_file = {
+      resize_window = true,
+    }
+  }
+}
 EOF
 
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
