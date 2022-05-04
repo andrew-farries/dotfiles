@@ -6,6 +6,7 @@
   "go.goplsOptions": {
     "experimentalWorkspaceModule": false,
     "experimentalPostfixCompletions": true,
+    "staticcheck": true,
     "analyses": {
       "fillreturns": true,
       "nonewvars": true,
