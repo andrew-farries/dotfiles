@@ -428,10 +428,10 @@ nnoremap <silent> <S-F12> :RGNoMatchFileNames!<CR>'
 " Needs no explanation - the most frequently used mapping of all.
 noremap <c-p> :Files<CR>
 
-" Make it so <c-[> can be used to save.
-inoremap <silent><c-[> <c-[>:wa<cr>
-nnoremap <silent><c-[> <c-[>:wa<cr>
-vnoremap <silent><c-[> <c-[>:wa<cr>
+" Make it so <esc> can be used to save.
+inoremap <silent><esc> <esc>:wa<cr>
+nnoremap <silent><esc> <esc>:wa<cr>
+vnoremap <silent><esc> <esc>:wa<cr>
 
 " Bind <c-c> to clear various things
 nnoremap <silent> <c-c> :nohl<CR>
