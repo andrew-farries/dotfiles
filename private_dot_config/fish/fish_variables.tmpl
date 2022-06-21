@@ -8,30 +8,6 @@ SETUVAR --export PAGER:less
 SETUVAR --export --path RIPGREP_CONFIG_PATH:{{ .chezmoi.homeDir }}/.rgrc
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
-{{ if (eq .chezmoi.os "linux") -}}
-SETUVAR _fish_abbr_d:docker
-{{- end -}}
-{{ if (eq .chezmoi.os "darwin") -}}
-SETUVAR _fish_abbr_l:limactl
-SETUVAR _fish_abbr_n:nerdctl
-{{- end }}
-SETUVAR _fish_abbr_b:bat
-SETUVAR _fish_abbr_c:chezmoi
-SETUVAR _fish_abbr_e:etcdctl
-SETUVAR _fish_abbr_f:flyway
-SETUVAR _fish_abbr_g:git
-SETUVAR _fish_abbr_p:protoc
-SETUVAR _fish_abbr_h:helm
-SETUVAR _fish_abbr_s:stripe
-SETUVAR _fish_abbr_k:kubectl
-SETUVAR _fish_abbr_kd:kubectl\x20describe
-SETUVAR _fish_abbr_kx:kubectl\x20delete
-SETUVAR _fish_abbr_m:minikube
-SETUVAR _fish_abbr_sn:kubectl\x20config\x20set\x2dcontext\x20\x2d\x2dcurrent\x20\x2d\x2dnamespace
-SETUVAR _fish_abbr_t:telepresence
-SETUVAR _fish_abbr_uc:kubectl\x20config\x20use\x2dcontext
-SETUVAR _fish_abbr_a:argocd
-SETUVAR _fish_abbr_w:werft
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7

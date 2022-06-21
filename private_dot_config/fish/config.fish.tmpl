@@ -1,4 +1,4 @@
-# Define some aliases
+# Aliases
 alias vim=nvim
 alias vi=nvim
 alias vimdiff='nvim -d'
@@ -10,3 +10,29 @@ alias hm='history --merge'
 {{ if (eq .chezmoi.os "darwin") -}}
 alias nerdctl=nerdctl.lima
 {{- end}}
+
+# Abbreviations
+abbr -a b bat
+abbr -a c chezmoi
+abbr -a e etcdctl
+abbr -a f flyway
+abbr -a g git
+abbr -a p protoc
+abbr -a h helm
+abbr -a s stripe
+abbr -a k kubectl
+abbr -a kd 'kubectl describe'
+abbr -a kx 'kubectl delete'
+abbr -a m minikube
+abbr -a sn 'kubectl config set-context --current --namespace'
+abbr -a t telepresence
+abbr -a uc 'kubectl config use-context'
+abbr -a a argocd
+abbr -a w werft
+{{ if (eq .chezmoi.os "linux") -}}
+abbr -a d docker
+{{- end -}}
+{{ if (eq .chezmoi.os "darwin") -}}
+abbr -a l limactl
+abbr -a n nerdctl
+{{- end }}
