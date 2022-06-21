@@ -36,3 +36,13 @@ abbr -a d docker
 abbr -a l limactl
 abbr -a n nerdctl
 {{- end }}
+
+# Variables
+fish_add_path {{ .chezmoi.homeDir }}/bin
+set -Ux DOCKER_SCAN_SUGGEST false
+set -Ux EDITOR nvim
+set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
+set -Ux FZF_DEFAULT_OPTS --info=default --border --color=dark --layout=reverse
+set -Ux PAGER less
+set -Ux --path RIPGREP_CONFIG_PATH {{ .chezmoi.homeDir }}/.rgrc
+set -Ux VISUAL nvim
