@@ -36,6 +36,10 @@ abbr -a d docker
 abbr -a l limactl
 abbr -a n nerdctl
 {{- end }}
+{{ if eq .gitpod true -}}
+abbr -a p previewctl
+abbr -a pi previewctl install-context
+{{ end }}
 
 # Variables
 fish_add_path {{ .chezmoi.homeDir }}/bin
