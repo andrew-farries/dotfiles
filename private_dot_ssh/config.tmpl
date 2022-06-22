@@ -1,0 +1,16 @@
+Host *
+    ServerAliveInterval 60
+{{- if eq .chezmoi.hostname "Andrews-MacBook-Pro"}}
+
+Host master
+  HostName 192.168.0.103
+  User ubuntu
+
+Host node1
+  HostName 192.168.0.106
+  User ubuntu
+
+Host node2
+  HostName 192.168.0.100
+  User ubuntu
+{{ end }}
