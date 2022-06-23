@@ -42,7 +42,9 @@ abbr -a pi previewctl install-context
 {{ end }}
 
 # Variables
+{{ if eq .gitpod false -}}
 fish_add_path {{ .chezmoi.homeDir }}/bin
+{{ end -}}
 set -Ux DOCKER_SCAN_SUGGEST false
 set -Ux EDITOR nvim
 set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
