@@ -28,7 +28,6 @@
   "list.nextKeymap": "<c-n>",
   "list.previousKeymap": "<c-p>",
   "snippets.ultisnips.enable": false,
-  "suggest.noselect": false,
 	"suggest.completionItemKindLabels": {
 		"keyword": "\uf1de",
 		"variable": "\ue79b",
