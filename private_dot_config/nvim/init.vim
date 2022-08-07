@@ -260,6 +260,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Add '-' as an additional char for completion so that hyphenated words are
 " suggested in their entirety.
 autocmd FileType * let b:coc_additional_keywords = ["-"]
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
+inoremap <silent><expr> <c-space> coc#refresh()
+
+hi CocSearch ctermfg=12 guifg=#18A3FF
+hi CocMenuSel ctermbg=109 guibg=#13354A
 " }}}
 
 " Plugin settings: coc-snippets {{{
