@@ -17,6 +17,10 @@ unbind C-b
 # Create a new prefix
 set -g prefix C-f
 
+# Enable the tmux passthrough escape sequence. This is required for
+# the OSC52 escape sequence to work from within vim.
+set -g allow-passthrough on
+
 # Set the delay between prefix and command
 set -s escape-time 1
 
