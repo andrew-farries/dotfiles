@@ -34,6 +34,7 @@
 			"settings": {}
 		}
 	},
+  "inlayHint.refreshOnInsertMode": true,
   "list.nextKeymap": "<c-n>",
   "list.previousKeymap": "<c-p>",
   "snippets.ultisnips.enable": false,
