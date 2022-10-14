@@ -24,7 +24,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'kyazdani42/blue-moon'
 Plug 'unblevable/quick-scope'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat', 'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'justinmk/vim-sneak'
 Plug 'wellle/targets.vim'
 Plug 'psliwka/vim-smoothie'
