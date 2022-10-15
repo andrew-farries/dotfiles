@@ -496,6 +496,9 @@ lua << EOF
 -- New in nvim 0.8, set the command height to 0
 vim.o.ch = 0
 
+-- New in nvim 0.8, set the last status to 0
+vim.o.ls = 0
+
 EOF
 " }}}
 
