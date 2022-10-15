@@ -60,6 +60,7 @@ lua << EOF
 require'nvim-tree'.setup{
   create_in_closed_folder = false,
   respect_buf_cwd = true,
+  open_on_setup = true,
   actions = {
     open_file = {
       resize_window = true,
