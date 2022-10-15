@@ -112,15 +112,10 @@ require'nvim-tree'.setup{
     },
   }
 }
-EOF
 
-nnoremap <C-n> :NvimTreeFindFileToggle<CR>
-" More available functions:
-" NvimTreeOpen
-" NvimTreeClose
-" NvimTreeFocus
-" NvimTreeFindFileToggle
-" NvimTreeResize
+vim.keymap.set("n", "<C-n>", function() require("nvim-tree.api").tree.toggle(false, true) end, { silent = true })
+
+EOF
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
