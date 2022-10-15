@@ -490,6 +490,13 @@ set splitright
 
 " Make the popup menu smaller
 set pumheight=10
+
+lua << EOF
+
+-- New in nvim 0.8, set the command height to 0
+vim.o.ch = 0
+
+EOF
 " }}}
 
 " TextYankPost setup {{{
