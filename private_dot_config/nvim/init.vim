@@ -66,6 +66,9 @@ require'nvim-tree'.setup{
       resize_window = true,
     },
   },
+  update_focused_file = {
+    enable = true
+  },
   renderer = {
     add_trailing = false,
     highlight_opened_files = "all",
