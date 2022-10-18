@@ -614,18 +614,6 @@ nnoremap <Right> :vertical resize -2<CR>
 set jumpoptions="stack"
 " }}}
 
-" Trailing whitespace {{{
-" Highlight trailing whitespace except when in insert mode on the current
-" line.
-" Taken from the vim wiki: https://vim.fandom.com/wiki/Highlight_unwanted_spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-" }}}
-
 " Misc {{{
 " Reload files changed outside of vim
 set autoread
