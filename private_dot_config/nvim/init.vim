@@ -576,7 +576,7 @@ set termguicolors
 " let g:onedark_terminal_italics=1
 
 " Set the colorscheme
-colorscheme blue-moon
+silent! colorscheme blue-moon
 " }}}
 
 " Swap and backup files {{{
