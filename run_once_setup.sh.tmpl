@@ -15,9 +15,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install nvim plugins
-nvim -es -u .config/nvim/init.vim -i NONE -c "PlugInstall" -c "qa"
+nvim --headless +PlugInstall +qa 
 
 # Install CoC plugins
-nvim -es -u .config/nvim/init.vim -i NONE -c "CocInstall -sync coc-go coc-tsserver coc-prettier coc-snippets" -c "qa"
+nvim --headless +"CocInstall -sync coc-go coc-tsserver coc-prettier coc-snippets" +qa
 
 {{ end -}}
