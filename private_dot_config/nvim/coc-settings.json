@@ -4,7 +4,6 @@
   "coc.source.buffer.firstMatch": false,
   "coc.source.around.firstMatch": false,
   "go.goplsOptions": {
-    "experimentalWorkspaceModule": false,
     "experimentalPostfixCompletions": true,
     "staticcheck": true,
     "analyses": {
