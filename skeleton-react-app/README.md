@@ -1,1 +1,0 @@
-# Skeleton React App
