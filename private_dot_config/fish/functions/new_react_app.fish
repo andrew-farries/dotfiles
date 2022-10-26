@@ -13,5 +13,6 @@ function new_react_app --description "create a new skeleton react application"
   pushd $destination
   npm install react react-dom
   npm install --save-dev parcel
+  rm -rf .git/
   popd
 end
