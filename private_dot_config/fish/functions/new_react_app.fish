@@ -9,11 +9,6 @@ function new_react_app --description "create a new skeleton react application"
     mkdir -p $destination
   end
 
-  if ! test -d ~/skeleton-react-app
-    echo "Unable to find ~/skeleton-react-app"
-    return 1;
-  end
-
   git clone git@github.com:andrew-farries/skeleton-react-app.git $destination
   pushd $destination
   npm install react react-dom
