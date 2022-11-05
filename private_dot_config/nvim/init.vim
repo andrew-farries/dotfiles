@@ -624,6 +624,9 @@ set autoread
 
 " Briefly show the matching bracket after typing it
 set showmatch matchtime=1
+
+" no mouse support
+set mouse=
 " }}}
 
 " Set the modeline to enable code folding in this file.
