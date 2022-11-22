@@ -125,6 +125,10 @@ setw -g mode-keys vi
 # Set a keybinding to toggle status bar visibility.
 bind v set -g status
 
+# Set a keybinding to clear all panes in the current window.
+# This overwrites the command to 'mark' a pane.
+bind m setw synchronize-panes \; send-keys C-l \; setw synchronize-panes
+
 # Enable focus events so that applications in panes can respond to focus events
 set -g focus-events on
 
