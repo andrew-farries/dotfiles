@@ -13,5 +13,6 @@ function new_aoc_app --description "create a new skeleton advent of code applica
   pushd $destination
   npm install 
   rm -rf .git/
+  rm src/utils/utils.test.ts
   popd
 end
