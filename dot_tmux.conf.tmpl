@@ -106,10 +106,7 @@ set -g status-justify centre
 
 # Define the left side of the status line
 set -g status-left-length 40
-set -g status-left \
-  "\uf308#[fg="#abb2bf",bg="#282c34"] #(kubectl config current-context)\
-  {{- if (eq .chezmoi.os "darwin") }} \ue712 #(limactl list --json | jq -r '.status')\{{ end }}
-  #[fg="#12100C",bg="#ffb45b"]#(echo $GITPOD_WORKSPACE_ID)"
+set -g status-left "\uf308#[fg="#abb2bf",bg="#282c34"] #(kubectl config current-context)"
 
 # Define the right side of the status line
 set -g status-right "#[fg="#abb2bf",bg="#282c34"]\uf64f %d %b %R"
