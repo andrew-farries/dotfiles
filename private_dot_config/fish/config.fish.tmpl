@@ -9,9 +9,6 @@ alias watch='watch -n1'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias hm='history --merge'
 alias root='cd (git rev-parse --show-toplevel)'
-{{ if (eq .chezmoi.os "darwin") -}}
-alias nerdctl=nerdctl.lima
-{{- end}}
 
 # Abbreviations
 abbr -a b bat
@@ -28,17 +25,7 @@ abbr -a t telepresence
 abbr -a uc 'kubectl config use-context'
 abbr -a a argocd
 abbr -a w werft
-{{ if (eq .chezmoi.os "linux") -}}
 abbr -a d docker
-{{- end -}}
-{{ if (eq .chezmoi.os "darwin") -}}
-abbr -a l limactl
-abbr -a n nerdctl
-{{- end }}
-{{ if eq .gitpod true -}}
-abbr -a p previewctl
-abbr -a pi previewctl install-context
-{{ end }}
 
 # Variables
 {{ if eq .gitpod false -}}
