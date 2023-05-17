@@ -122,6 +122,9 @@ setw -g mode-keys vi
 # Set a keybinding to toggle status bar visibility.
 bind v set -g status
 
+# Set the number of lines in scrollback buffer
+set -g history-limit 50000
+
 # Set a keybinding to clear all panes in the current window.
 # This overwrites the command to 'mark' a pane.
 bind m setw synchronize-panes \; send-keys C-l \; setw synchronize-panes
