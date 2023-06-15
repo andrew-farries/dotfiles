@@ -6,6 +6,7 @@
   "go.goplsOptions": {
     "experimentalPostfixCompletions": true,
     "staticcheck": true,
+    "symbolScope": "workspace",
     "analyses": {
       "fillreturns": true,
       "nonewvars": true,
