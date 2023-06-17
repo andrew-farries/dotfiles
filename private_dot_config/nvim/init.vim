@@ -492,8 +492,8 @@ set pumheight=10
 
 lua << EOF
 
--- Set the command height to 0
-vim.o.ch = 0
+-- Set the command height to 1. This is the default.
+vim.o.ch = 1
 
 -- Set the last status to 0
 vim.o.ls = 0
