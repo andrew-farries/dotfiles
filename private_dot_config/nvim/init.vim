@@ -389,6 +389,12 @@ noremap <leader>ga :Gwrite<CR>
 noremap <leader>gb :Git blame<CR>
 noremap <leader>gc :Git commit<CR>
 noremap <leader>gd :Gdiff<CR>
+
+" Copilot mappings
+" See :h copilot for other mappings.
+inoremap jk <Plug>(copilot-next)
+inoremap kj <Plug>(copilot-previous) 
+inoremap sg <Plug>(copilot-suggest) 
 " }}}
 
 " Yank settings {{{
