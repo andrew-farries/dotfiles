@@ -35,6 +35,7 @@ Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
 Plug 'svban/YankAssassin.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ojroques/vim-oscyank'
+Plug 'github/copilot.vim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
