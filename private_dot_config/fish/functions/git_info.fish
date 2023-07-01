@@ -77,13 +77,13 @@ function git_info --description "Print an information string about the state of 
   if test -n "$ahead" || test -n "$behind"
     echo -ns (set_color cyan) " ("
     if test -n "$ahead"
-      printf "%s\uf431%s" (set_color yellow) $ahead
+      printf "%s\uf062 %s" (set_color yellow) $ahead
       if test -n "$behind"
         echo -n " "
       end
     end
     if test -n "$behind"
-      printf "%s\uf433%s" (set_color brpurple) $behind
+      printf "%s\uf063 %s" (set_color brpurple) $behind
     end
     echo -ns (set_color cyan) ")"
   end
