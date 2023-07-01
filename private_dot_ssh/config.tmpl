@@ -1,6 +1,6 @@
 Host *
     ServerAliveInterval 60
-{{- if eq .chezmoi.hostname "Andrews-MacBook-Pro"}}
+{{ if (eq .chezmoi.os "darwin") -}}
 
 Host master
   HostName 192.168.0.103
