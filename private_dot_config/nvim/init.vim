@@ -394,7 +394,6 @@ noremap <leader>gd :Gdiff<CR>
 " See :h copilot for other mappings.
 inoremap jk <Plug>(copilot-next)
 inoremap kj <Plug>(copilot-previous) 
-inoremap sg <Plug>(copilot-suggest) 
 " }}}
 
 " Yank settings {{{
