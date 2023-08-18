@@ -367,6 +367,12 @@ let g:scrollview_winblend=0
 let g:scrollview_column=1
 " }}}
 
+" Plugin settings: copilot {{{
+" See :h copilot for other mappings.
+inoremap jk <Plug>(copilot-next)
+inoremap kj <Plug>(copilot-previous) 
+" }}}
+
 " Netrw settings {{{
 " Hide annoying 'help' banner
 let g:netrw_banner = 0
@@ -389,11 +395,6 @@ noremap <leader>ga :Gwrite<CR>
 noremap <leader>gb :Git blame<CR>
 noremap <leader>gc :Git commit<CR>
 noremap <leader>gd :Gdiff<CR>
-
-" Copilot mappings
-" See :h copilot for other mappings.
-inoremap jk <Plug>(copilot-next)
-inoremap kj <Plug>(copilot-previous) 
 " }}}
 
 " Yank settings {{{
