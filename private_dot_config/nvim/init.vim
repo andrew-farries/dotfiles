@@ -371,6 +371,9 @@ let g:scrollview_column=1
 " See :h copilot for other mappings.
 inoremap jk <Plug>(copilot-next)
 inoremap kj <Plug>(copilot-previous) 
+
+imap <silent><script><expr> <C-e> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
 " }}}
 
 " Netrw settings {{{
