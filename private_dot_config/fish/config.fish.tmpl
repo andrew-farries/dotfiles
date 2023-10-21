@@ -27,9 +27,7 @@ abbr -a w werft
 abbr -a d docker
 
 # Variables
-{{ if eq .gitpod false -}}
 fish_add_path {{ .chezmoi.homeDir }}/bin
-{{ end -}}
 fish_add_path -a {{ .chezmoi.homeDir }}/go/bin
 set -Ux DOCKER_SCAN_SUGGEST false
 set -Ux EDITOR nvim
