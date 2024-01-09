@@ -1,6 +1,6 @@
 function xatadev
     begin
-        pushd /Users/andrew/git/client-ts/cli/bin
+        pushd /Users/andrew/git/client-ts/
         and pnpm build
         and popd
     end
