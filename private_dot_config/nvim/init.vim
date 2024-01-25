@@ -66,8 +66,28 @@ require'nvim-tree'.setup{
   actions = {
     open_file = {
       resize_window = true,
+      window_picker = {
+        enable = false
+      }
     },
   },
+  view = {
+    float = {
+      enable = true,
+      open_win_config = {
+        relative = "win",
+        border = "rounded",
+        width = 50,
+        height = 100,
+        row = 0,
+        col = 0,
+      }
+    }
+  },
+  hijack_directories = {
+    auto_open = false
+  },
+  hijack_unnamed_buffer_when_opening = true,
   update_focused_file = {
     enable = true
   },
@@ -115,7 +135,7 @@ require'nvim-tree'.setup{
   }
 }
 
-vim.keymap.set("n", "<C-n>", function() require("nvim-tree.api").tree.toggle(false, true) end, { silent = true })
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 EOF
 
