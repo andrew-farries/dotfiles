@@ -24,9 +24,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'kyazdani42/blue-moon'
 Plug 'unblevable/quick-scope'
 Plug 'michaeljsmith/vim-indent-object'
-" Pin treesitter to a specific version to avoid breakage.
-" See: https://github.com/kyazdani42/blue-moon/issues/6
-Plug 'nvim-treesitter/nvim-treesitter', {'tag': 'v0.9.2', 'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'justinmk/vim-sneak'
 Plug 'wellle/targets.vim'
 Plug 'psliwka/vim-smoothie'
