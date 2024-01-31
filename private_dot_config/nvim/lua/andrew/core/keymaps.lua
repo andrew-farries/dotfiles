@@ -1,0 +1,1 @@
+-- This is where basic, non plugin related keymaps will go
