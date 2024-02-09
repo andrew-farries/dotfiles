@@ -614,8 +614,6 @@ set nowritebackup
 " }}}
 
 " Search {{{
-set incsearch
-set hlsearch
 set ignorecase
 set smartcase
 " }}}
@@ -643,9 +641,6 @@ set jumpoptions="stack"
 " }}}
 
 " Misc {{{
-" Reload files changed outside of vim
-set autoread
-
 " Autosave buffers on lots of different events, eg jumps to other files, :make
 " etc
 :set autowrite
