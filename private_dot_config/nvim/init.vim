@@ -408,7 +408,7 @@ let g:netrw_winsize = '30'
 " Leader key mappings {{{
 " Define some leader mappings for using fzf.vim functionality.
 nnoremap <leader><space> :Buffers<CR>
-nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>/ :Lines<CR>
 nnoremap <leader>fg :GFiles?<CR>
 nnoremap <leader>rg :RGNoMatchFileNames<CR>
 nnoremap <leader>RG :RGNoMatchFileNames!<CR>
