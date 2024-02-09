@@ -563,7 +563,6 @@ tnoremap <esc> <c-\><c-n>
 " Indentation and tabs {{{
 " Read helps and look at this:
 " https://www.reddit.com/r/vim/wiki/tabstop
-set autoindent
 set smartindent
 set tabstop=2
 set shiftwidth=2
