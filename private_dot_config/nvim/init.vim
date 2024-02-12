@@ -454,6 +454,10 @@ nnoremap { {zz
 " Make j and k behave sensibly on wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Quickfix list navigation
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprev<CR>
 " }}}
 
 " Visual mode mappings {{{
