@@ -1,19 +1,12 @@
+--
+-- catppuccin has integrations with many different plugins
+-- Remember to enable support for them as each plugin is installed.
+--
 return {
-  "bluz71/vim-nightfly-guicolors",
-  lazy=false,
-  priority=1000,
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
   config = function()
-    -- use line window separators
-    vim.g.nightflyWinSeparator = 2
-    vim.cmd([[colorscheme nightfly]])
-  end,
+    vim.cmd([[colorscheme catppuccin-frappe]])
+  end
 }
-
--- return {
-  -- "kyazdani42/blue-moon",
-  -- lazy=false,
-  -- priority=1000,
-  -- config = function()
-    -- vim.cmd([[colorscheme blue-moon]])
-  -- end,
--- }
