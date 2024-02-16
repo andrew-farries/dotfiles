@@ -487,7 +487,7 @@ nnoremap <silent><esc> <esc>:wa<cr>
 vnoremap <silent><esc> <esc>:wa<cr>
 
 " Bind <c-c> to clear various things
-nnoremap <silent> <c-c> :nohl<CR>
+nnoremap <silent> <c-c> :nohl \| ccl<CR>
 
 " Use <c-t> to open the terminal - F1 is inconvenient on macbook keyboards.
 nnoremap <silent> <c-t> :FloatermToggle<CR>
