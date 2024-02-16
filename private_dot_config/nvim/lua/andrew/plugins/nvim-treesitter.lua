@@ -23,6 +23,15 @@ return {
             enable = true,
             additional_vim_regex_highlighting = false,
           },
+          incremental_selection = {
+            enable = true,
+            keymaps = {
+              init_selection = "'",
+              node_incremental = "'",
+              scope_incremental = false,
+              node_decremental = "\"",
+            },
+          },
           indent = {
             enable = false
           },
