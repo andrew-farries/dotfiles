@@ -1,8 +1,8 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
---    "hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
 --			"hrsh7th/cmp-path",
 --			"L3MON4D3/LuaSnip",
 --			"saadparwaiz1/cmp_luasnip",
@@ -14,8 +14,10 @@ return {
   config = function()
     local cmp = require("cmp")
     local cmp_buffer = require('cmp_buffer')
+    local cmp_lsp = require("cmp_nvim_lsp")
 
     cmp.setup({
+      preselect = cmp.PreselectMode.None,
       snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
@@ -37,6 +39,7 @@ return {
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
         { name = 'buffer', 
           option = {
             get_bufnrs = function()
@@ -44,7 +47,6 @@ return {
             end
           }
         },
-        -- { name = 'nvim_lsp' },
         -- { name = 'vsnip' }, -- For vsnip users.
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -55,7 +57,13 @@ return {
           function(...) return cmp_buffer:compare_locality(...) end,
           -- add comparators for other sources here too.
         }
-      }
+      },
+    })
+
+    -- Set up lspconfig.
+    local capabilities = cmp_lsp.default_capabilities()
+    require('lspconfig').gopls.setup({
+      capabilities = capabilities,
     })
   end
 }
