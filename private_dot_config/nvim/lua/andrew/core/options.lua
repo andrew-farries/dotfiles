@@ -38,7 +38,7 @@ vim.opt.smartcase = true
 vim.opt.updatetime = 50
 
 -- Set completeopt to have a better completion experience
-vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.completeopt = { "menuone", "noselect", "preview" }
 
 -- Enable 24-bit color
 vim.opt.termguicolors = true
