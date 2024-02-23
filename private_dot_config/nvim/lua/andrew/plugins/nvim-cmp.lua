@@ -6,10 +6,11 @@ return {
     "hrsh7th/cmp-path",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
---			"rafamadriz/friendly-snippets",
---			"onsails/lspkind.nvim",
---			"windwp/nvim-ts-autotag",
---			"windwp/nvim-autopairs",
+    "hrsh7th/cmp-cmdline",
+--	"rafamadriz/friendly-snippets",
+--	"onsails/lspkind.nvim",
+--	"windwp/nvim-ts-autotag",
+--	"windwp/nvim-autopairs",
   },
   config = function()
     local cmp = require("cmp")
@@ -52,6 +53,24 @@ return {
           -- add comparators for other sources here too.
         }
       },
+    })
+
+    -- Use buffer source for `/` and `?`
+    cmp.setup.cmdline({ '/', '?' }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }
+      }
+    })
+
+    -- Use cmdline & path source for ':'
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' }
+      }, {
+        { name = 'cmdline' }
+      })
     })
 
     -- Set up lspconfig.
