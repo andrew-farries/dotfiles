@@ -17,11 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- Initialize plugins
 --
-require("lazy").setup({ 
-  { 
-    import = "andrew.plugins",
-    install = { 
-      { colorscheme = "catppuccin-mocha" }
-    }
-  }
+require("lazy").setup("andrew.plugins", {
+	install = {
+		colorscheme = { "catpuccin-mocha" },
+	},
 })
