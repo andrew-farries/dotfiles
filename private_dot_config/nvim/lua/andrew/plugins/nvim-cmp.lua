@@ -7,6 +7,7 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
 --	"onsails/lspkind.nvim",
 --	"windwp/nvim-ts-autotag",
 --	"windwp/nvim-autopairs",
@@ -31,8 +32,9 @@ return {
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-x>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<C-c>'] = cmp.mapping.abort(),
+        ['<C-e>'] = function(fallback) fallback() end,
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -45,6 +47,7 @@ return {
           }
         },
         { name = 'path' },
+        { name = 'nvim_lsp_signature_help' },
       }),
       sorting = {
         comparators = {

@@ -17,6 +17,12 @@ return {
           dismiss = "<c-x>",
         },
       },
+      filetypes = {
+        yaml = true,
+        markdown = true,
+        gitcommit = true,
+        gitrebase = true,
+      },
     })
   end
 }
