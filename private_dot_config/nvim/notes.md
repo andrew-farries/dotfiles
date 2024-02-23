@@ -8,6 +8,8 @@ Next:
 * replace a tree with oil.nvim
 
 Other interesting completion sources:
-* https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
-* https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol
 * Find more on the nvim-cmp wiki
+
+Other notable plugins:
+* https://github.com/ray-x/lsp_signature.nvim
+  * this looks like a more advanced version of `cmp-nvim-lsp-signature-help`
