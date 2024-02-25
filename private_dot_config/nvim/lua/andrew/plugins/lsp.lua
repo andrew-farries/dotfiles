@@ -21,14 +21,24 @@ return {
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
         -- Buffer local mappings.
-        -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf }
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-        vim.keymap.set('n', 'gr', builtin.lsp_references, opts)
+
+        vim.keymap.set('n', 'gr', function()
+          builtin.lsp_references({ include_declaration = false })
+        end, opts)
+
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        vim.keymap.set('n', '<leader>o', builtin.lsp_document_symbols, opts)
+
+        vim.keymap.set('n', '<leader>o', function()
+          builtin.lsp_document_symbols({
+            symbol_width = 80,
+            symbol_type_width = 10,
+          })
+        end, opts)
+
         vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
         vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)

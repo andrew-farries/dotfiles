@@ -2,8 +2,8 @@
 
 Next:
 * Telescope
+  * More setup
 * https://github.com/kylechui/nvim-surround
-* start using copilot via nvim-cmp
 * tmux navigator
 * nvim-autopairs via cmp
 * replace a tree with oil.nvim
