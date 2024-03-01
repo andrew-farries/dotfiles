@@ -5,6 +5,7 @@
   "coc.source.around.firstMatch": false,
   "go.goplsOptions": {
     "experimentalPostfixCompletions": true,
+    "gofumpt": true,
     "staticcheck": true,
     "symbolScope": "workspace",
     "analyses": {
