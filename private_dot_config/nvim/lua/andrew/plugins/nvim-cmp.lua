@@ -37,7 +37,7 @@ return {
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-c>'] = cmp.mapping.abort(),
         ['<C-e>'] = function(fallback) fallback() end,
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<c-y>'] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
