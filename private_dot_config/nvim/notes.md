@@ -1,6 +1,9 @@
 # Installation notes
 
 Next:
+* Format on save
+ * what about the `formal` plugin?
+* a popup terminal
 * Telescope
   * More setup
 * https://github.com/kylechui/nvim-surround
@@ -13,9 +16,3 @@ Other interesting completion sources:
 Improvements to make:
 * Have a closer look at treesitter text objects
   * Try to get a good keymap for expand and shrink selection
-
-Other notable plugins:
-* https://github.com/ray-x/lsp_signature.nvim
-  * this looks like a more advanced version of `cmp-nvim-lsp-signature-help`
-* https://github.com/AndreM222/copilot-lualine
-  * might be good to get more insight into copilot
