@@ -32,3 +32,19 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = "AndrewAuGroup",
   desc = "Highlight on yank",
 })
+
+--
+--- Toggle terminal when editing from within terminal
+--  and open the file in a new split
+--
+vim.api.nvim_create_autocmd("User", {
+  callback = function()
+    -- Toggle the terminal off.
+    require('toggleterm').toggle_all()
+    -- open in a new split
+    vim.cmd("vsplit")
+  end,
+  group = "AndrewAuGroup",
+  pattern = "UnceptionEditRequestReceived",
+  desc = "Toggle terminal when editing from within terminal",
+})
