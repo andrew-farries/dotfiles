@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "a7a4b4682c4b3e2ba82b82a4e6e5f5a0e79dec32" },
+  "blame.nvim": { "branch": "main", "commit": "7cb17b953bf1a5a11e36505497f1a74a609627d3" },
   "blue-moon": { "branch": "master", "commit": "69cbaf2a2b28a94ba7c8dc1bb5e86ceb5501785a" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
