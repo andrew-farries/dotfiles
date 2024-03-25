@@ -11,7 +11,7 @@
 {{ end -}}
 [core]
 	whitespace = trailing-space, space-before-tab, cr-at-eol
-	editor = nvim -u ~/.config/nvim/init.lua
+	editor = nvim -u ~/.config/nvim/init.lua --cmd 'let g:unception_block_while_host_edits=1'
 	fileMode = false
 	ignorecase = true
 [pager]
