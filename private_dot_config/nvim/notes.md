@@ -3,12 +3,9 @@
 Next:
 * Format on save
  * what about the `formal` plugin?
-* a popup terminal
 * Telescope
   * More setup
-* https://github.com/kylechui/nvim-surround
 * nvim-autopairs via cmp
-* replace a tree with oil.nvim
 
 Other interesting completion sources:
 * Find more on the nvim-cmp wiki
