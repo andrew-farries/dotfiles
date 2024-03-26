@@ -19,14 +19,18 @@ return {
       view = {
         float = {
           enable = true,
-          open_win_config = {
-            relative = "win",
-            border = "rounded",
-            width = 50,
-            height = 100,
-            row = 0,
-            col = 0,
-          }
+          open_win_config = function() 
+            local height = math.max(vim.o.lines-3, 20)
+
+            return {
+              relative = "win", 
+              border = "rounded",
+              width = 50,
+              height = height,
+              row = 0,
+              col = 0,
+            }
+          end
         }
       },
       hijack_directories = {
