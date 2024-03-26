@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd({"InsertLeave", "TextChanged", "FocusLost"}, {
 --
 -- Reload the file on focus gained
 --
-vim.api.nvim_create_autocmd({"FocusGained", "BufEnter"}, {
+vim.api.nvim_create_autocmd({"FocusGained", "TermLeave"}, {
   command = "silent! !",
   group = "AndrewAuGroup",
   desc = "Reload the buffer on focus gained",
