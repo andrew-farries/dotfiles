@@ -43,7 +43,9 @@ return {
           builtin.lsp_dynamic_workspace_symbols({})
         end, opts)
 
-        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+        -- disabled as it conflicts with tmux navigation
+        -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+
         vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
         vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
         vim.keymap.set('n', '<leader>wl', function()
