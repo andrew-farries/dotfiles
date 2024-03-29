@@ -34,8 +34,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 --
---- Toggle terminal when editing from within terminal
---  and open the file in a new split
+-- Toggle terminal when editing from within terminal
+-- and open the file in a new split
 --
 vim.api.nvim_create_autocmd("User", {
   callback = function()
@@ -47,4 +47,17 @@ vim.api.nvim_create_autocmd("User", {
   group = "AndrewAuGroup",
   pattern = "UnceptionEditRequestReceived",
   desc = "Toggle terminal when editing from within terminal",
+})
+
+--
+-- Ensure that any git commit message buffers are wiped on close.
+-- This prevents them hanging around in the buffer list.
+--
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    vim.bo.bufhidden = "wipe"
+  end,
+  pattern = "gitcommit",
+  group = "AndrewAuGroup",
+  desc = "Set buffer options for git commit messages",
 })
