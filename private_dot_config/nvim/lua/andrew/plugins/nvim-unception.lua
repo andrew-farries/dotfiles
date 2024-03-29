@@ -1,3 +1,3 @@
 return {
-  "samjwill/nvim-unception",
+  "andrew-farries/nvim-unception",
 }
