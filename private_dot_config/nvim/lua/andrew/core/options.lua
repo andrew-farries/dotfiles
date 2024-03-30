@@ -11,7 +11,7 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
--- Enable smart indenting
+-- Line wrapping settings
 vim.opt.breakindent = true
 vim.opt.linebreak = true
 
@@ -42,9 +42,6 @@ vim.opt.termguicolors = true
 
 -- Enable the sign column and share it with the number column
 vim.opt.signcolumn = "number"
-
--- Enable access to System Clipboard
-vim.opt.clipboard = "unnamed,unnamedplus"
 
 -- Enable cursor line highlight
 vim.opt.cursorline = true
