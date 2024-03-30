@@ -8,7 +8,10 @@ vim.api.nvim_create_augroup("AndrewAuGroup", { clear = true })
 -- Auto-save: write the file on every change and when focus is lost
 --
 vim.api.nvim_create_autocmd({"InsertLeave", "TextChanged", "FocusLost"}, {
-  command = "silent! update",
+  callback = function()
+    vim.notify('Auto-saving ' .. vim.fn.expand('%:t'))
+    vim.cmd("silent! update")
+  end,
   group = "AndrewAuGroup",
   desc = "Auto-save: write the buffer on every change",
 })
