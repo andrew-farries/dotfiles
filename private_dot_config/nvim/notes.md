@@ -1,15 +1,16 @@
 # Installation notes
 
 Next:
-* Format on save
- * what about the `formal` plugin?
+* More treesitter textobjects
+  * you only did the first part (selection) - there is more:
+    * movements
+    * some kind of LSP interop to show a floating definition preview
 * Telescope
-  * More setup
+  * More setup - you only did an initial pass
 * nvim-autopairs via cmp
 
 Other interesting completion sources:
 * Find more on the nvim-cmp wiki
 
 Improvements to make:
-* Have a closer look at treesitter text objects
   * Try to get a good keymap for expand and shrink selection
