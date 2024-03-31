@@ -6,12 +6,17 @@ vim.api.nvim_create_augroup("AndrewAuGroup", { clear = true })
 
 --
 -- Auto-save: write the file on every change and when focus is lost
+-- The `silent!` is used to suppress the "No write since last change" message
+-- The exclamation mark is used to suppress the error message if the buffer
+-- is not modifiable.
+-- nested = true is used to allow the autocmd to to trigger other autocmds
 --
 vim.api.nvim_create_autocmd({"InsertLeave", "TextChanged", "FocusLost"}, {
-  callback = function()
-    vim.notify('Auto-saving ' .. vim.fn.expand('%:t'))
+  callback = function(tbl)
+    vim.notify('Auto-saving' .. vim.inspect(tbl))
     vim.cmd("silent! update")
   end,
+  nested = true,
   group = "AndrewAuGroup",
   desc = "Auto-save: write the buffer on every change",
 })
