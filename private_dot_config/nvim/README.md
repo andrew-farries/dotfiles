@@ -1,6 +1,8 @@
 # Installation notes
 
 Next:
+* complete the lualine setup.
+  * use blocks rather than triangle separators
 * Telescope
   * More setup - you only did an initial pass
 * nvim-autopairs via cmp
