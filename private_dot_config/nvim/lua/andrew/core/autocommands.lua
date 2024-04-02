@@ -13,7 +13,7 @@ vim.api.nvim_create_augroup("AndrewAuGroup", { clear = true })
 --
 vim.api.nvim_create_autocmd({"InsertLeave", "TextChanged", "FocusLost"}, {
   callback = function(tbl)
-    vim.notify('Auto-saving' .. vim.inspect(tbl))
+    -- vim.notify('Auto-saving' .. vim.inspect(tbl))
     vim.cmd("silent! update")
   end,
   nested = true,
