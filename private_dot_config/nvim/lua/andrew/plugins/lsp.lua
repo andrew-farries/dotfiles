@@ -4,7 +4,6 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   config = function()
-    local lspconfig = require('lspconfig')
     local builtin = require('telescope.builtin')
 
     vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
