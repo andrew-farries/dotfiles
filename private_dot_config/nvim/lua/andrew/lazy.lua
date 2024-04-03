@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 require("lazy").setup("andrew.plugins", {
   install = {
-    colorscheme = { "catpuccin-mocha" },
+    colorscheme = { "habamax" },
   },
   change_detection = {
     notify = false,
