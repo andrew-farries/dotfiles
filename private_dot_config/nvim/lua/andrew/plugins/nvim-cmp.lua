@@ -87,7 +87,7 @@ return {
     local capabilities = cmp_lsp.default_capabilities()
     require('lspconfig').gopls.setup({
       capabilities = capabilities,
-      settings = require('andrew.lsp_settings')
+      settings = require('andrew.core.lsp-settings')
     })
   end
 }
