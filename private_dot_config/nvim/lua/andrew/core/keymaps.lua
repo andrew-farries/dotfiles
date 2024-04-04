@@ -19,7 +19,7 @@ vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix item" })
 vim.keymap.set({ 'n', 'v' }, 'y', '"*y', { desc = "Yank to system clipboard" })
 
 -- Toggle diagnostic virtual text
-vim.keymap.set("n", "<leader>dt", function()
+vim.keymap.set("n", "<leader>td", function()
   local x = vim.diagnostic.config().virtual_text
 
   vim.diagnostic.config({ virtual_text = not x })
