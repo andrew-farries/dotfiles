@@ -9,6 +9,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true, desc = "Disabl
 vim.keymap.set("n", "<C-c>", function() 
   vim.cmd.nohls()
   vim.cmd.cclose()
+  vim.cmd.lclose()
 end, { desc = "Clear and close" })
 
 -- Traverse the quickfix list
