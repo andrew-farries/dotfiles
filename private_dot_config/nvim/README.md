@@ -1,5 +1,8 @@
 # Installation notes
 
+## Annoyances
+* Find references should go straight to the only reference
+
 Next:
 * Telescope
   * More setup - you only did an initial pass
