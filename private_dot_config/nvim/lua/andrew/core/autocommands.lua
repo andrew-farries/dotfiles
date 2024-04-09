@@ -58,14 +58,14 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 --
--- Ensure that any git commit message buffers are wiped on close.
+-- Ensure that any git commit message and rebase buffers are wiped on close.
 -- This prevents them hanging around in the buffer list.
 --
 vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.bo.bufhidden = "wipe"
   end,
-  pattern = "gitcommit",
+  pattern = "gitcommit,gitrebase",
   group = "AndrewAuGroup",
-  desc = "Set buffer options for git commit messages",
+  desc = "Set buffer options for git buffers",
 })
