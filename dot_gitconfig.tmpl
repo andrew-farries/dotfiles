@@ -83,8 +83,8 @@
 	amenda = commit -a --verbose --reset-author --amend --no-edit
 	cp = cherry-pick
 	line = show --oneline -s
-	fix = commit --verbose --fixup
-	fixa = commit -a --verbose --fixup
+	fix = fixup -a -b origin/main
+	fixa = fixup -a -b origin/main
 	addi = add --interactive
 	addp = add -p
 	adde = add --edit
