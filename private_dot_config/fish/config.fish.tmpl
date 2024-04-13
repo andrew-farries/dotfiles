@@ -35,7 +35,7 @@ fish_add_path -a {{ .chezmoi.homeDir }}/.cargo/bin
 set -Ux DOCKER_SCAN_SUGGEST false
 set -Ux EDITOR nvim
 set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
-set -Ux FZF_DEFAULT_OPTS --info=default --border --color=dark --layout=reverse
+set -Ux FZF_DEFAULT_OPTS --info=default --border --color=dark --layout=reverse --no-mouse
 set -Ux --path RIPGREP_CONFIG_PATH {{ .chezmoi.homeDir }}/.rgrc
 set -Ux VISUAL nvim
 set -g fish_greeting
