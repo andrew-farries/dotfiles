@@ -5,7 +5,7 @@ return {
       commit_detail_view = "vsplit",
 
       vim.keymap.set('n', '<leader>gb', function()
-        vim.cmd('ToggleBlame')
+        vim.cmd('BlameToggle')
       end, { desc = 'Git blame' })
     })
   end,
