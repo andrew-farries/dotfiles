@@ -22,6 +22,7 @@ vim.keymap.set("n", "[l", vim.cmd.lprev, { desc = "Previous loclist item" })
 
 -- Use the system clipboard for yanks
 vim.keymap.set({ 'n', 'v' }, 'y', '"*y', { desc = "Yank to system clipboard" })
+vim.keymap.set({ 'n', 'v' }, 'Y', '"*y$', { desc = "Yank to system clipboard" })
 
 -- Toggle diagnostic virtual text
 vim.keymap.set("n", "<leader>td", function()
