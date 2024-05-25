@@ -7,8 +7,6 @@ return {
     local builtin = require('telescope.builtin')
 
     vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float)
-    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-    vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
     vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist)
 
     -- Use LspAttach autocommand to only map the following keys
@@ -28,7 +26,6 @@ return {
           builtin.lsp_references({ include_declaration = false })
         end, opts)
 
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
 
         vim.keymap.set('n', '<leader>o', function()
