@@ -12,6 +12,10 @@ vim.keymap.set("n", "<C-c>", function()
   vim.cmd.lclose()
 end, { desc = "Clear and close" })
 
+-- use j and k to navigate wrapped lines intuitively
+vim.keymap.set("n", "j", "gj", { desc = "move down" })
+vim.keymap.set("n", "k", "gk", { desc = "move up" })
+
 -- Traverse the quickfix list
 vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next quickfix item" })
 vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix item" })
