@@ -1,0 +1,37 @@
+# !/bin/bash
+
+# Git subcommand to select a commit to show using `fzf`
+#  Usage: git showfzf <commit-message>
+#
+#  -b : base branch to compare against (default: origin/main)
+#  COMMIT MESSAGE : commit message of the commit to show
+#
+#  If the message matches only one commit, it will be shown without
+#  opening fzf, otherwise fzf will be invoked with <commit message> as the
+#  query string.
+
+# Set default values for the command line switches
+base_ref="origin/main"
+
+# Parse the command line arguments
+while getopts "b:" opt; do
+  case $opt in
+    b)
+      base_ref=$OPTARG
+      ;;
+  esac
+done
+
+# Remove the switches from the command line arguments
+shift $((OPTIND-1))
+
+# Run the fzf selection and show process
+git log --oneline $base_ref.. \
+  | fzf \
+    --nth='2..' \
+    --height='25%' \
+    --preview 'git show --color=always --name-status {1}' \
+    --select-1 \
+    $( [[ -n "$@" ]] && echo "--query $@" ) \
+  | cut -f1 -d' ' \
+  | xargs git show
