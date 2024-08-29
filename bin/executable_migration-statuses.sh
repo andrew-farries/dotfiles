@@ -30,9 +30,22 @@ for ns in "${clu_namespaces[@]}"; do
   username=$(echo "$secretJson" | jq -r '.data.master_username' | base64 --decode)
   password=$(echo "$secretJson" | jq -r '.data["attribute.master_password"]' | base64 --decode)
 
-  # Fetch the migration status
-  migrate \
+  # Fetch the migration version
+  version=$(migrate \
     --database "pgx://$username:$password@$endpoint:$port/xata?search_path=xata_private" \
     --path $migPath \
-    version
+    version 2>&1)
+
+  # Display migration status
+  echo -n $version
+
+  # Goto a previous migration version
+  # if [[ $version == "93" ]]; then
+  #   migrate \
+  #   --database "pgx://$username:$password@$endpoint:$port/xata?search_path=xata_private" \
+  #   --path $migPath \
+  #   goto 92
+  # fi
+
+  echo ""
 done
