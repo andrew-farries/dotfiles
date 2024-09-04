@@ -36,7 +36,8 @@ jq --arg workspace "$workspace" \
    | sponge $httpie_session_file
 
 # Enable Postgres access on the workspace
-http -q --session xata-local PATCH http://localhost:6001/workspaces/$workspace/settings postgresEnabled:=true
+# This is no longer necessary as workspaces now allow Postgres-enabled databases by default
+# http -q --session xata-local PATCH http://localhost:6001/workspaces/$workspace/settings postgresEnabled:=true
 
 # Create a new database
 http -q --session xata-local PUT http://localhost:6001/workspaces/$workspace/dbs/pgrolldb region=dev
