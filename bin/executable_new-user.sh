@@ -40,7 +40,7 @@ jq --arg workspace "$workspace" \
 # http -q --session xata-local PATCH http://localhost:6001/workspaces/$workspace/settings postgresEnabled:=true
 
 # Create a new database
-http -q --session xata-local PUT http://localhost:6001/workspaces/$workspace/dbs/pgrolldb region=dev
+http -q --session xata-local PUT http://localhost:6001/workspaces/$workspace/dbs/pgrolldb region=dev postgresEnabled:=true
 
 # Print the user details
 echo "User: $user_email"
