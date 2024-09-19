@@ -14,7 +14,7 @@
 # Set defaults for user email, database name, and httpie session file
 user_email=${1:-foo@xata.io}
 db_name=${2:-pgrolldb}
-httpie_session_file=~/.config/httpie/sessions/localhost_6001/xata-local.json
+httpie_session_file=~/.config/httpie/sessions/local/local.json
 
 # Create a new user and workspace
 output=$(go run ~/git/xata/tools/create_user $user_email)
