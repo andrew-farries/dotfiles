@@ -33,6 +33,9 @@ fish_add_path {{ .chezmoi.homeDir }}/bin
 fish_add_path -a {{ .chezmoi.homeDir }}/go/bin
 fish_add_path -a {{ .chezmoi.homeDir }}/.cargo/bin
 set -Ux HTTPIE_PROD_SESSION ~/.config/httpie/sessions/prod/prod.json
+set -Ux HTTPIE_STAGING_SESSION ~/.config/httpie/sessions/staging/staging.json
+set -Ux HTTPIE_DEV_SESSION ~/.config/httpie/sessions/dev/dev.json
+set -Ux HTTPIE_LOCAL_SESSION ~/.config/httpie/sessions/local/local.json
 set -Ux DOCKER_SCAN_SUGGEST false
 set -Ux EDITOR nvim
 set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
