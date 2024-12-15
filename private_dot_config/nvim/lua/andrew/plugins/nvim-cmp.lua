@@ -89,5 +89,6 @@ return {
       capabilities = capabilities,
       settings = require('andrew.core.lsp-settings')
     })
+    require'lspconfig'.ccls.setup{}
   end
 }
