@@ -58,6 +58,7 @@ return {
         { name = 'nvim_lsp_signature_help' },
       }),
       sorting = {
+        priority_weight = 200,
         comparators = {
           function(...) return cmp_buffer:compare_locality(...) end,
           -- add comparators for other sources here too.
