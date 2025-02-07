@@ -40,7 +40,7 @@ return {
     vim.keymap.set('n', '<leader>km', builtin.keymaps, { desc = 'Telescope Keymaps' })
 
     vim.keymap.set('n', '<leader><space>', function()
-      builtin.buffers({ sort_lastused = true })
+      builtin.buffers({ sort_mru = true })
     end, { desc = 'Telescope Buffers' })
   end,
 }
