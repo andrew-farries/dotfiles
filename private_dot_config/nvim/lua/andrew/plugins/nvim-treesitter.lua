@@ -11,6 +11,7 @@ return {
           "go",
           "html",
           "javascript",
+          "json",
           "lua",
           "nix",
           "rust",
