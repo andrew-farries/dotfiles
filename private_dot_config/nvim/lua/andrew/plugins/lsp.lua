@@ -45,7 +45,7 @@ return {
         vim.keymap.set('n', '<leader>wl', function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, opts)
-        vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, opts)
+        vim.keymap.set('n', 'gry', vim.lsp.buf.type_definition, opts)
 
         -- redundant when using conform
         -- vim.keymap.set('n', '<leader>f', function()
