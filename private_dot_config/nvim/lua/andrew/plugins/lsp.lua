@@ -26,7 +26,7 @@ return {
           builtin.lsp_references({ include_declaration = false })
         end, opts)
 
-        vim.keymap.set('n', '<leader>o', function()
+        vim.keymap.set('n', 'gO', function()
           builtin.lsp_document_symbols({
             symbol_width = 80,
             symbol_type_width = 10,
