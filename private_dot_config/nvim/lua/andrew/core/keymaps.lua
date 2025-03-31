@@ -16,14 +16,6 @@ end, { desc = "Clear and close" })
 vim.keymap.set("n", "j", "gj", { desc = "move down" })
 vim.keymap.set("n", "k", "gk", { desc = "move up" })
 
--- Traverse the quickfix list
-vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next quickfix item" })
-vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix item" })
-
--- Traverse the location list
-vim.keymap.set("n", "]l", vim.cmd.lnext, { desc = "Next loclist item" })
-vim.keymap.set("n", "[l", vim.cmd.lprev, { desc = "Previous loclist item" })
-
 -- Use the system clipboard for yanks
 vim.keymap.set({ 'n', 'v' }, 'y', '"+y', { desc = "Yank to system clipboard" })
 vim.keymap.set({ 'n', 'v' }, 'Y', '"+y$', { desc = "Yank to system clipboard" })
