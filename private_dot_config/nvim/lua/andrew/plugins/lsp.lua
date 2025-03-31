@@ -22,7 +22,7 @@ return {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 
-        vim.keymap.set('n', 'gr', function()
+        vim.keymap.set('n', 'grr', function()
           builtin.lsp_references({ include_declaration = false })
         end, opts)
 
