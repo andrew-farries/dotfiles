@@ -1,6 +1,9 @@
 # vi: ft=dosini
 [main]
 
+# Don't use local timezone, default to the server timezone.
+use_local_timezone = False
+
 # Enables context sensitive auto-completion. If this is disabled, all
 # possible completions will be listed.
 smart_completion = True
