@@ -56,3 +56,6 @@ vim.opt.wildignorecase = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
+
+-- Enable diagnostic messages on the current line only
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
