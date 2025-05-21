@@ -22,8 +22,19 @@ return {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 
+        -- Find references
         vim.keymap.set('n', 'grr', function()
-          builtin.lsp_references({ include_declaration = false })
+          builtin.lsp_references({
+            include_declaration = false,
+        })
+        end, opts)
+        --
+        -- Find references ignoring test files
+        vim.keymap.set('n', 'grR', function()
+          builtin.lsp_references({
+            include_declaration = false,
+            file_ignore_patterns = { "%_test.go" },
+        })
         end, opts)
 
         vim.keymap.set('n', 'go', function()
