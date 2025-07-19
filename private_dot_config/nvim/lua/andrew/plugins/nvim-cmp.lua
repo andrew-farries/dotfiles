@@ -86,10 +86,17 @@ return {
 
     -- Set up lspconfig.
     local capabilities = cmp_lsp.default_capabilities()
+
+    -- Set up gopls Go LSP
     require('lspconfig').gopls.setup({
       capabilities = capabilities,
       settings = require('andrew.core.lsp-settings')
     })
+
+    -- Set up ccls C/C++ LSP
     require'lspconfig'.ccls.setup{}
+
+    -- Set up Typescript/JavaScript LSP
+    require("typescript-tools").setup({})
   end
 }
