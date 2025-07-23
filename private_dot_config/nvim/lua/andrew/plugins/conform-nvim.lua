@@ -10,6 +10,8 @@ return {
     formatters_by_ft = {
       go    = { lsp_format = "prefer" },
       gomod = { lsp_format = "prefer" },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
     },
 
     -- Automatically format on save
