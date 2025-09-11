@@ -28,6 +28,7 @@ fish_add_path {{ .chezmoi.homeDir }}/bin
 fish_add_path -a {{ .chezmoi.homeDir }}/go/bin
 fish_add_path -a {{ .chezmoi.homeDir }}/.cargo/bin
 fish_add_path -a {{ .chezmoi.homeDir }}/.config/xata/bin
+fish_add_path -a /opt/homebrew/share/google-cloud-sdk/bin
 set -Ux HTTPIE_PROD_SESSION ~/.config/httpie/sessions/prod/prod.json
 set -Ux HTTPIE_STAGING_SESSION ~/.config/httpie/sessions/staging/staging.json
 set -Ux HTTPIE_DEV_SESSION ~/.config/httpie/sessions/dev/dev.json
