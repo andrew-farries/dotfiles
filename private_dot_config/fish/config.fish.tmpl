@@ -5,11 +5,11 @@ alias vimdiff='nvim -d'
 alias ls='lsd --no-symlink'
 alias tree='lsd --tree'
 alias cat=bat
-alias watch='watch -n1'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias hm='history --merge'
 alias root='cd (git rev-parse --show-toplevel)'
 alias glow='glow -p'
+alias kubectl='kubecolor'
 
 # Abbreviations
 abbr -a c chezmoi
@@ -35,6 +35,8 @@ set -Ux HTTPIE_DEV_SESSION ~/.config/httpie/sessions/dev/dev.json
 set -Ux HTTPIE_LOCAL_SESSION ~/.config/httpie/sessions/local/local.json
 set -Ux DOCKER_SCAN_SUGGEST false
 set -Ux DOCKER_CLI_HINTS false
+set -Ux KUBECOLOR_OBJ_FRESH 1h
+set -Ux KUBECOLOR_THEME_BASE_INFO default
 set -Ux EDITOR nvim
 set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
 set -Ux FZF_DEFAULT_OPTS --info=default --border --color=dark --layout=reverse --no-mouse
