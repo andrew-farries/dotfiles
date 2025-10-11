@@ -88,15 +88,19 @@ return {
     local capabilities = cmp_lsp.default_capabilities()
 
     -- Set up gopls Go LSP
-    require('lspconfig').gopls.setup({
+    vim.lsp.config('gopls', {
       capabilities = capabilities,
       settings = require('andrew.core.lsp-settings')
     })
 
     -- Set up ccls C/C++ LSP
-    require'lspconfig'.ccls.setup{}
+    vim.lsp.config('ccls', {})
 
     -- Set up Typescript/JavaScript LSP
     require("typescript-tools").setup({})
+
+    -- Enable LSP clients
+    vim.lsp.enable('gopls')
+    vim.lsp.enable('ccls')
   end
 }
