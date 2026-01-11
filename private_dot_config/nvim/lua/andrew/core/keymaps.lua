@@ -30,3 +30,10 @@ end, { desc = "Toggle diagnostic virtual text" })
 
 -- Use <esc> to exit insert mode in the terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit insert mode in terminal" })
+
+-- Show file info and copy filepath to system clipboard
+vim.keymap.set("n", "<C-g>", function()
+  local filepath = vim.fn.expand("%")
+  vim.fn.setreg("+", filepath)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-g>", true, false, true), "n", false)
+end, { desc = "Show file info and copy path to clipboard" })
