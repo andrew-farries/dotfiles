@@ -14,6 +14,7 @@
       "Bash(head:*)",
       "Bash(ls:*)",
       "Bash(cat:*)",
+      "Bash(tree:*)",
       "Bash(gh search issues:*)",
       "Bash(gh search code:*)",
       "Bash(gh search prs:*)",
