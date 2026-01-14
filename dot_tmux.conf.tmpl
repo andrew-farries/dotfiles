@@ -86,9 +86,9 @@ setw -g window-status-style fg="#abb2bf",bg="#282c34"
 # Set colors for the active window
 setw -g window-status-current-style fg="#282c34",bg=green,bold
 
-# Colors for pane borders
-setw -g pane-border-style fg="#abb2bf"
-setw -g pane-active-border-style fg=green,bold
+# Colors for pane borders (red means synced)
+setw -g pane-border-style '#{?pane_synchronized,fg=red,fg=#abb2bf}'
+setw -g pane-active-border-style '#{?pane_synchronized,fg=red bold,fg=green bold}'
 
 # Style the command/message line
 set -g message-style fg="#abb2bf",bg="#282c34"
@@ -120,6 +120,12 @@ set -g history-limit 50000
 # Set a keybinding to clear all panes in the current window.
 # This overwrites the command to 'mark' a pane.
 bind m setw synchronize-panes \; send-keys C-l \; setw synchronize-panes
+
+# Toggle pane synchronization for the current pane
+bind y set-option -p synchronize-pane
+
+# Unsync all panes in the current window
+bind U run-shell "tmux list-panes -F '##{pane_id}' | xargs -I{} tmux set-option -t {} -p -u synchronize-pane"
 
 # Enable focus events so that applications in panes can respond to focus events
 set -g focus-events on
