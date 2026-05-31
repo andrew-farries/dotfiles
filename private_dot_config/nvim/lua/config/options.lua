@@ -65,3 +65,7 @@ vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 -- Enable experimental v2 UI
 require('vim._core.ui2').enable()
+
+-- Set the border style for floating and popup windows
+vim.opt.winborder = "rounded"
+vim.opt.pumborder = "rounded"
