@@ -28,13 +28,13 @@
 [advice]
 	detachedHead = false
 [diff]
-	tool = neovimdiff
+	tool = nvim_difftool
 	colorMoved = default
 	colorMovedWs = ignore-space-change
 	algorithm = histogram
 	indentHeuristic = on
-[difftool "neovimdiff"]
-  cmd = nvim -d $LOCAL $REMOTE
+[difftool "nvim_difftool"]
+  cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = kdiff3
 	conflictstyle = zdiff3
@@ -49,7 +49,7 @@
 	hr = reset --hard
 	detach = checkout --detach
 	ds = diff --stat
-	dt = difftool
+	dt = difftool -d
 	d = diff --ws-error-highlight=all --indent-heuristic
 	dc = diff --ws-error-highlight=all --cached --indent-heuristic
 	dcw = diff -w --ws-error-highlight=all --cached --indent-heuristic
@@ -96,8 +96,6 @@
 	cop = checkout -p
 	reword = reword -b origin/main
 	split = split -b origin/main
-[diff]
-	algorithm = histogram
 [clean]
 	requireForce = false
 [push]
