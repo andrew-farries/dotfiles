@@ -5,12 +5,11 @@
 -- Disable space in normal mode
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true, desc = "Disable space" })
 
--- Use <c-c> to clear and close various things
+-- Use <c-c> to close the quickfix and location lists
 vim.keymap.set("n", "<C-c>", function() 
-  vim.cmd.nohls()
   vim.cmd.cclose()
   vim.cmd.lclose()
-end, { desc = "Clear and close" })
+end, { desc = "Close quickfix and location lists" })
 
 -- use j and k to navigate wrapped lines intuitively
 vim.keymap.set("n", "j", "gj", { desc = "move down" })
