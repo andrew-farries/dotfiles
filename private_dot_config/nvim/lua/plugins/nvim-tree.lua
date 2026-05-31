@@ -1,0 +1,78 @@
+require('nvim-tree').setup({
+  create_in_closed_folder = false,
+  respect_buf_cwd = true,
+  hijack_directories = {
+    auto_open = false,
+  },
+  hijack_unnamed_buffer_when_opening = true,
+  update_focused_file = {
+    enable = true,
+  },
+  actions = {
+    open_file = {
+      resize_window = true,
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
+  view = {
+    float = {
+      enable = true,
+      open_win_config = function()
+        return {
+          relative = 'win',
+          border = 'rounded',
+          width = 50,
+          height = math.max(vim.o.lines - 3, 20),
+          row = 0,
+          col = 0,
+        }
+      end,
+    },
+  },
+  renderer = {
+    add_trailing = false,
+    highlight_opened_files = 'all',
+    root_folder_modifier = ':~',
+    group_empty = false,
+    special_files = { 'README.md' },
+    icons = {
+      padding = ' ',
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
+    indent_markers = {
+      enable = true,
+    },
+  },
+})
+
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeFindFileToggle<cr>', { desc = 'Toggle file explorer on current file' })

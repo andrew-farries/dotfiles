@@ -20,16 +20,11 @@ vim.keymap.set("n", "k", "gk", { desc = "move up" })
 vim.keymap.set({ 'n', 'v' }, 'y', '"+y', { desc = "Yank to system clipboard" })
 vim.keymap.set({ 'n', 'v' }, 'Y', '"+y$', { desc = "Yank to system clipboard" })
 
--- Toggle diagnostic virtual text
-vim.keymap.set("n", "<leader>td", function()
-  local x = vim.diagnostic.config().virtual_text
-
-  vim.diagnostic.config({ virtual_text = not x })
-  vim.notify("Diagnostic virtual text " .. (x and "disabled" or "enabled"))
-end, { desc = "Toggle diagnostic virtual text" })
-
 -- Use <esc> to exit insert mode in the terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit insert mode in terminal" })
+
+-- Open tag in vertical split (overrides default horizontal split)
+vim.keymap.set('n', '<C-w>]', '<C-w>v<C-]>', { desc = 'Open tag in vertical split' })
 
 -- Show file info and copy filepath to system clipboard
 vim.keymap.set("n", "<C-g>", function()

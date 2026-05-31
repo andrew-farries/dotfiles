@@ -57,5 +57,11 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 
+-- Allow loading project-local config from .nvim.lua
+vim.opt.exrc = true
+
 -- Enable diagnostic messages on the current line only
 vim.diagnostic.config({ virtual_lines = { current_line = true } })
+
+-- Enable experimental v2 UI
+require('vim._core.ui2').enable()
