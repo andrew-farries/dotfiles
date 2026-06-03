@@ -46,6 +46,7 @@ vim.pack.add({
   'https://github.com/stevearc/conform.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/okuuva/auto-save.nvim',
+  'https://github.com/mistweaverco/kulala.nvim',
 })
 
 --
@@ -73,3 +74,4 @@ require('plugins.nvim-tree')
 require('plugins.conform')
 require('plugins.nvim-treesitter')
 require('plugins.auto-save')
+require('plugins.kulala')

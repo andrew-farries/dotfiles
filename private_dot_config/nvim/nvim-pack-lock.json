@@ -28,12 +28,16 @@
       "rev": "5e8d9f0deb34b079baf84ffe0abbe0475a6b5372",
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
+    "kulala.nvim": {
+      "rev": "cc31bcaa8a9b21ce8e04b73c7969409958142632",
+      "src": "https://github.com/mistweaverco/kulala.nvim"
+    },
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "9573948c38bfabeec353ae7dd7d3ffec4c506a6b",
+      "rev": "07dff35e7c95288861200b788ef32d6103f107f0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
