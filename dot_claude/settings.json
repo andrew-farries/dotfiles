@@ -29,5 +29,6 @@
       "Bash(rg:*)"
     ]
   },
-  "alwaysThinkingEnabled": false
+  "alwaysThinkingEnabled": false,
+  "agentPushNotifEnabled": true
 }
