@@ -29,7 +29,7 @@
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
     "kulala.nvim": {
-      "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
+      "rev": "0d5be25d343891741a54dd94e36e6bdc65e7eee9",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lualine.nvim": {
