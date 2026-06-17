@@ -17,7 +17,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "b54c05349d406f7af11b150824efa8e4f90015c6",
+      "rev": "7df55b20b5b653941f0bcff87e559cabb6fafeb0",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "fidget.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
     "kulala.nvim": {
-      "rev": "9945d576751c8a6a8331c46fc9436d62e796ff28",
+      "rev": "143966c65767414f8b3d545d44b86902ab0f0843",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lualine.nvim": {
