@@ -29,7 +29,7 @@
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
     "kulala.nvim": {
-      "rev": "bed6150762d4a5ab5c0a336ebb01626f7ad0ab26",
+      "rev": "a627ebcafe2d053fa395b2d324dc9f6cbb61495e",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lualine.nvim": {
@@ -85,7 +85,7 @@
       "src": "https://github.com/nvim-telescope/telescope-ui-select.nvim"
     },
     "telescope.nvim": {
-      "rev": "9377230aa5305d9e9aca4ed8dadf1070fb4aa9fc",
+      "rev": "427b576c16792edad01a92b89721d923c19ad60f",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "toggleterm.nvim": {
