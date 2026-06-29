@@ -11,6 +11,7 @@ local parsers = {
   'typescript',
   'vim',
   'vimdoc',
+  'cue',
 }
 
 local filetypes = {
@@ -26,6 +27,7 @@ local filetypes = {
   'typescript',
   'vim',
   'help',
+  'cue',
 }
 
 require('nvim-treesitter').install(parsers)
