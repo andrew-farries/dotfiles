@@ -155,6 +155,7 @@ save_to_clipboard = true
 decorations = "None"
 dynamic_padding = true
 dynamic_title = false
+option_as_alt = "OnlyLeft"
 
 [window.padding]
 x = 0
