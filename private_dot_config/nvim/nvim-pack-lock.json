@@ -29,7 +29,7 @@
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
     "kulala.nvim": {
-      "rev": "84cb164d2088e2c781bedde0229610ff0d7f0eec",
+      "rev": "91cf892008c773ce74ac392c4c12ddff775b7619",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lualine.nvim": {
@@ -49,7 +49,7 @@
       "src": "https://github.com/alexghergh/nvim-tmux-navigation"
     },
     "nvim-tree.lua": {
-      "rev": "35d3511e7ad4cbfa44c78c406db663b6e2a07c0d",
+      "rev": "cf18a662cd5f200361b6fedfb794eed583e075e1",
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-treesitter": {
