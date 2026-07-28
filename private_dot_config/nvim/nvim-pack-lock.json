@@ -17,7 +17,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "2a849bc7bec4d175524c332c20d48ca9ece735df",
+      "rev": "0f616b9a51cb9e2498834dfd99f6da6966158eba",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "fidget.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/linrongbin16/gitlinker.nvim"
     },
     "kulala.nvim": {
-      "rev": "7f83b6100321c848ca87ac9df414ebe6141e3f5f",
+      "rev": "e4e8615dc07d9423f3dd52ad5af962db09d26a52",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lualine.nvim": {
@@ -37,7 +37,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "b89138d9af0a96e6048e202a15765fc6b6416bd4",
+      "rev": "7ab79bb1b57160a537f427ac8a6026102f12b701",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-treesitter": {
-      "rev": "7248feaca45e4d944591497964bc19afa89ad1c6",
+      "rev": "61df84986b4b4ec469ee745a182e433d49f8c27e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-unception": {
