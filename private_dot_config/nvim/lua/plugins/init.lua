@@ -46,7 +46,8 @@ vim.pack.add({
   'https://github.com/stevearc/conform.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/okuuva/auto-save.nvim',
-  'https://github.com/mistweaverco/kulala.nvim',
+  -- Pin kulala because of license server shenanigans. Hopefully temporary.
+  { src = 'https://github.com/mistweaverco/kulala.nvim', version = 'v6.29.0' }
 })
 
 --
