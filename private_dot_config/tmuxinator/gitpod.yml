@@ -1,0 +1,13 @@
+name: gitpod
+root: <%= ENV["GITPOD_REPO_ROOT"] %>
+
+windows:
+- nvim: vi
+- term: {}
+- k8s:
+    layout: tiled
+    panes:
+    - watch kubectl get pods
+    - {}
+    - {}
+    - {}

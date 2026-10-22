@@ -1,0 +1,62 @@
+# Aliases
+alias vim=nvim
+alias vi=nvim
+alias vimdiff='nvim -d'
+alias ls='lsd --no-symlink'
+alias tree='lsd --tree'
+alias cat=bat
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias hm='history --merge'
+alias root='cd (git rev-parse --show-toplevel)'
+alias glow='glow -p'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias kubectl='kubecolor'
+alias bc='bc -l'
+
+# Abbreviations
+abbr -a c chezmoi
+abbr -a g git
+abbr -a k kubectl
+abbr -a d docker
+abbr -a t tilt
+abbr -a p pulumi
+abbr -a kn 'kubectl debug node/$NODE -it --image busybox --profile=sysadmin -- chroot /host bash'
+abbr -a kd 'kubectl describe'
+abbr -a kx 'kubectl delete'
+abbr -a sn 'kubectl config set-context --current --namespace'
+abbr -a uc 'kubectl config use-context'
+
+# Variables
+fish_add_path {{ .chezmoi.homeDir }}/bin
+fish_add_path -a {{ .chezmoi.homeDir }}/go/bin
+fish_add_path -a {{ .chezmoi.homeDir }}/.cargo/bin
+fish_add_path -a {{ .chezmoi.homeDir }}/.config/xata/bin
+fish_add_path -a /opt/homebrew/share/google-cloud-sdk/bin
+set -Ux HTTPIE_PROD_SESSION ~/.config/httpie/sessions/prod/prod.json
+set -Ux HTTPIE_STAGING_SESSION ~/.config/httpie/sessions/staging/staging.json
+set -Ux HTTPIE_DEV_SESSION ~/.config/httpie/sessions/dev/dev.json
+set -Ux HTTPIE_LOCAL_SESSION ~/.config/httpie/sessions/local/local.json
+set -Ux DOCKER_SCAN_SUGGEST false
+set -Ux DOCKER_CLI_HINTS false
+set -Ux KUBECOLOR_OBJ_FRESH 1h
+set -Ux KUBECOLOR_THEME_BASE_INFO default
+set -Ux EDITOR nvim
+set -Ux FZF_DEFAULT_COMMAND fd --type f --follow
+set -Ux FZF_DEFAULT_OPTS --info=default --border --color=dark --layout=reverse --no-mouse
+set -Ux --path RIPGREP_CONFIG_PATH {{ .chezmoi.homeDir }}/.rgrc
+set -Ux VISUAL nvim
+set -g fish_greeting
+
+# Colors
+set fish_color_cwd red
+set fish_color_command 005fd7
+set fish_color_param 00afff
+
+# Vi mode cursor shapes
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one underscore
+set fish_cursor_visual block blink
+
+# Set up direnv
+direnv hook fish | source

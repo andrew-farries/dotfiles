@@ -1,0 +1,12 @@
+#! /bin/bash
+
+printf "starting port-forward...\n"
+kubectl port-forward svc/mysql 3306 2>&1 > /dev/null &
+pid=$!
+
+password=$(kubectl get secret mysql -o json | jq -r '.data.password' | base64 -d)
+
+mycli -u gitpod -p$password gitpod
+
+printf "terminating port-forward...\n"
+kill $pid

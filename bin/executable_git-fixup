@@ -1,0 +1,49 @@
+# !/bin/bash
+
+# Git subcommand to fixup commits using fzf.
+#  Usage: git fixup [-a] [-b BASE_BRANCH] [COMMIT MESSAGE]
+#
+#  -a : commit all changes, not just staged
+#  -b : base branch to compare against (default: origin/main)
+#  COMMIT MESSAGE : commit message of the commit to be fixed up.
+#
+#  If the message matches only one  commit, it will be fixed up without
+#  opening fzf, otherwise fzf will be invoked with <commit message> as the
+#  query string.
+
+# Set default values for the command line switches
+all_changes=false
+base_ref="origin/main"
+
+# Parse the command line arguments
+while getopts "ab:" opt; do
+  case $opt in
+    a)
+      all_changes=true
+      ;;
+    b)
+      base_ref=$OPTARG
+      ;;
+  esac
+done
+
+# Remove the switches from the command line arguments
+shift $((OPTIND-1))
+
+# Define the commit command based on the all_changes flag
+if [ $all_changes = true ]; then
+  commit_cmd="git commit -a --verbose --fixup"
+else
+  commit_cmd="git commit --verbose --fixup"
+fi
+
+# Run the fzf selection and commit process
+git log --oneline $base_ref.. \
+  | fzf \
+    --nth='2..' \
+    --height='25%' \
+    --preview 'git show --color=always --name-status {1}' \
+    --select-1 \
+    $( [[ -n "$@" ]] && echo "--query $@" ) \
+  | cut -f1 -d' ' \
+  | xargs $commit_cmd

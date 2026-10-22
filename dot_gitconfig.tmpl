@@ -1,0 +1,123 @@
+[user]
+	name = Andrew Farries
+	email = andrew.farries@xata.io
+	signingkey = /Users/andrew/.ssh/id_ed25519.pub
+[init]
+  defaultBranch = main
+[color]
+	ui = true
+[core]
+	whitespace = trailing-space, space-before-tab, cr-at-eol
+	editor = nvim -u ~/.config/nvim/init.lua --cmd 'let g:unception_block_while_host_edits=1'
+	fileMode = false
+	ignorecase = true
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Dracula
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+[interactive]
+  diffFilter = delta --color-only
+[advice]
+	detachedHead = false
+[diff]
+	tool = nvim_difftool
+	colorMoved = default
+	colorMovedWs = ignore-space-change
+	algorithm = histogram
+	indentHeuristic = on
+[difftool "nvim_difftool"]
+  cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = kdiff3
+	conflictstyle = zdiff3
+[mergetool "neovimmerge"]
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED
+	keepBackup = false
+[alias]
+	co = checkout
+	home = checkout origin/main
+	st = status
+	sv = status -vv
+	hr = reset --hard
+	detach = checkout --detach
+	ds = diff --stat
+	dt = difftool -d
+	d = diff --ws-error-highlight=all --indent-heuristic
+	dc = diff --ws-error-highlight=all --cached --indent-heuristic
+	dcw = diff -w --ws-error-highlight=all --cached --indent-heuristic
+	dw = diff -w --indent-heuristic
+	rb = rebase --autosquash
+	rbi = rebase -i
+	rbf = rebase -f
+	rbm = rebase origin/main --autosquash
+	rbim = rebase -i origin/main
+	rbc = rebase --continue
+	br = branch
+	lg = log --graph --pretty=myoneline
+	l = log --graph --pretty=myoneline --first-parent origin/main HEAD
+	la = log --graph --pretty=myoneline --first-parent --branches origin/main HEAD
+	lb = log --graph --pretty=myoneline --first-parent origin/main..
+	laa = log --graph --pretty=myoneline --first-parent --all HEAD
+	laaa = log --graph --pretty=myoneline --all HEAD
+	ft = fetch --prune
+	ff = merge --ff-only
+	rp = rev-parse
+	mt = mergetool
+	sl = stash list
+	sa = stash apply
+	ci = commit --verbose
+	cia = commit --verbose -a
+	cim = commit --reset-author --verbose -c
+	ciam = commit -a --reset-author --verbose -c
+	cin = commit --verbose --no-verify
+	cian = commit --verbose -a --no-verify
+	amend = commit --verbose --reset-author --amend --no-edit
+	amenda = commit -a --verbose --reset-author --amend --no-edit
+	cp = cherry-pick
+	line = show --oneline -s
+	fix = fixup -b origin/main
+	fixa = fixup -a -b origin/main
+	addi = add --interactive
+	addp = add -p
+	adde = add --edit
+	shw = showfzf -b origin/main
+	shows = show -s
+	shown = show --name-status
+	showw = show -w
+	fpush = push --force-with-lease
+	cop = checkout -p
+	reword = reword -b origin/main
+	split = split -b origin/main
+[clean]
+	requireForce = false
+[push]
+	default = simple
+	autoSetupRemote = true
+[rerere]
+	enabled = false
+[pretty]
+	myoneline = "%C(auto)%h %C(green)[%<(16,trunc)%an] %C(reset)(%C(cyan)%<(8,trunc)%ar%C(reset)) %C(reset)%<(100,trunc)%s%C(auto)%d"
+[color "diff"]
+	whitespace = red reverse
+[rebase]
+	autosquash = true
+	autostash = true
+	updateRefs = true
+[mergetool]
+	keepBackup = false
+[github]
+	user = andrew-farries
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

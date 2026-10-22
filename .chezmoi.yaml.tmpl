@@ -1,0 +1,22 @@
+{{- $codespace:= env "CODESPACES" | not | not -}}
+{{- $gitpod:= env "GITPOD_WORKSPACE_ID" | not | not -}}
+
+sourceDir: {{ .chezmoi.sourceDir | quote }}
+cd:
+  command: fish
+diff:
+  command: delta
+  pager: cat
+edit:
+  command: nvim
+data:
+  {{- if $codespace }}
+  codespace: true
+  {{- else }}
+  codespace: false
+  {{- end }}
+  {{- if $gitpod }}
+  gitpod: true
+  {{- else }}
+  gitpod: false
+  {{- end }}
